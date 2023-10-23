@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import classNames from 'classnames'
 import Link from 'next/link'
-import Image from 'next/image'
+
 import { defaultNavItems } from './defaultNavItems'
 import {
   Bars3BottomLeftIcon,
