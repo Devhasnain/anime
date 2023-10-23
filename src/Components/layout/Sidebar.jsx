@@ -2,10 +2,10 @@ import React, { useRef } from 'react'
 import classNames from 'classnames'
 import Link from 'next/link'
 import Image from 'next/image'
-import { defaultNavItems, NavItem } from './defaultNavItems'
+import { defaultNavItems } from './defaultNavItems'
 import {
-  ChevronDoubleLeftIcon,
-  ChevronDoubleRightIcon,
+  Bars3BottomLeftIcon,
+  Bars3BottomRightIcon,
 } from '@heroicons/react/24/solid'
 
 const Sidebar = ({
@@ -14,14 +14,14 @@ const Sidebar = ({
   shown,
   setCollapsed,
 }) => {
-  const Icon = collapsed ? ChevronDoubleRightIcon : ChevronDoubleLeftIcon
+  const Icon = collapsed ? Bars3BottomLeftIcon : Bars3BottomRightIcon
 
   return (
     <div
       className={classNames({
         'bg-black text-zinc-50 fixed md:static md:translate-x-0 z-20': true,
         'transition-all duration-300 ease-in-out': true,
-        'w-[300px]': !collapsed,
+        'w-[240px]': !collapsed,
         'w-16': collapsed,
         '-translate-x-full': !shown,
       })}
@@ -31,17 +31,18 @@ const Sidebar = ({
           'flex flex-col justify-between h-screen sticky inset-0 w-full': true,
         })}
       >
-        {/* logo and collapse button */}
         <div
           className={classNames({
-            'flex items-center border-b border-b-indigo-800 transition-none': true,
-            'p-4 justify-between': !collapsed,
-            'py-4 justify-center': collapsed,
+            'flex items-center  transition-none': true,
+            'p-3 justify-between': !collapsed,
+            'py-3 justify-center': collapsed,
           })}
         >
-          {!collapsed && <span className='whitespace-nowrap'>My Logo</span>}
+          {!collapsed && (
+            <span className='whitespace-nowrap'>Anime Eleven</span>
+          )}
           <button
-            className='grid place-content-center hover-bg-indigo-800 w-10 h-10 rounded-full opacity-0 md-opacity-100'
+            className='grid place-content-center hover-bg-indigo-800 w-10 h-10 rounded-full opacity-100 md-opacity-100'
             onClick={() => setCollapsed(!collapsed)}
           >
             <Icon className='w-5 h-5' />
@@ -58,8 +59,8 @@ const Sidebar = ({
                 <li
                   key={index}
                   className={classNames({
-                    'text-indigo-100 hover-bg-indigo-900 flex': true, // colors
-                    'transition-colors duration-300': true, // animation
+                    'text-indigo-100 hover-bg-indigo-900 flex': true,
+                    'transition-colors duration-300': true,
                     'rounded-md p-2 mx-3 gap-4': !collapsed,
                     'rounded-full p-2 mx-3 w-10 h-10': collapsed,
                   })}
@@ -72,29 +73,6 @@ const Sidebar = ({
             })}
           </ul>
         </nav>
-        <div
-          className={classNames({
-            'grid place-content-stretch p-4': true,
-          })}
-        >
-          <div className='flex gap-4 items-center h-11 overflow-hidden'>
-            <Image
-              src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto-format&fit=facearea&facepad=2&w=256&h=256&q=80'
-              height={36}
-              width={36}
-              alt='profile image'
-              className='rounded-full'
-            />
-            {!collapsed && (
-              <div className='flex flex-col'>
-                <span className='text-indigo-50 my-0'>Anime Eleven</span>
-                <Link href='/' className='text-indigo-200 text-sm'>
-                  View Profile
-                </Link>
-              </div>
-            )}
-          </div>
-        </div>
       </div>
     </div>
   )
