@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="space-y-1">
           <span className=" text-white text-xl">Join our newsletter</span>
           <div className="text-[#ffff]/50 text-sm font-normal ">
-            We'll send you a nice letter once per week. No spam.
+            We&apos;ll send you a nice letter once per week. No spam.
           </div>
         </div>
         <fieldset className="grid sm:grid-cols-12 grid-cols-1 w-full gap-4">

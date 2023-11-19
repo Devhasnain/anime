@@ -35,7 +35,7 @@ const Hero = () => {
             </div>
           </div>
           <p className="sm:flex hidden">
-            A man with a passion for vending machines awakens to realize that he has not only died, but he has also been reborn as one of his beloved machines! Although he is a modern appliance in a fantasy world, he requires money in order to keep functioning. He is stuck in one location until a young girl named Lammis stumbles upon him. Amazed by the drinks and food he sells, Lammis uses her "Blessing of Might" to lift him with ease and take him back to the village of Clearflow Lake.
+            A man with a passion for vending machines awakens to realize that he has not only died, but he has also been reborn as one of his beloved machines! Although he is a modern appliance in a fantasy world, he requires money in order to keep functioning. He is stuck in one location until a young girl named Lammis stumbles upon him. Amazed by the drinks and food he sells, Lammis uses her &apos;Blessing of Might&apos; to lift him with ease and take him back to the village of Clearflow Lake.
           </p>
           <p className="sm:hidden flex">
             A man with a passion for vending machines awakens to realize that he has not only died, but he has also been reborn as one of his beloved machines! Although he is a modern appliance in a fantasy world, he requires money in order to keep functioning. He is stuck in one location until a young girl named Lammis stumbles upon him.
