@@ -23,7 +23,7 @@ const Footer = () => {
           </button>
         </fieldset>
       </form>
-      <footer className="footer p-10 bg-[#121212] text-white">
+      <footer className="footer py-10 px-[1.5rem] bg-[#121212] text-white">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 space-y-5 xl:space-y-0 xl:grid-cols-12 w-full pt-12 pb-6 gap-8">
           <div className="xl:col-span-4 w-full space-y-7">
             <h3 className="text-2xl font-medium tracking-wide">Anime Eleven</h3>

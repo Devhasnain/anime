@@ -13,7 +13,7 @@ type Props = {
   };
 };
 
-const MovieCard = ({ movie }: Props) => {
+const SliderMovieCard = ({ movie }: Props) => {
   let getMovieTitle = (movie: any) => {
     let title = movie.original_title
       ? movie.original_title
@@ -24,14 +24,13 @@ const MovieCard = ({ movie }: Props) => {
     return movie_title;
   };
   return (
-    <div className="xl:col-span-2 space-y-3 cursor-pointer">
-      <div className="overflow-hidden rounded-xl w-full h-[50vh] relative transition-all hover:scale-[1.01]">
-        {/* {
-                    movie.adult && */}
-        <span className="absolute h-8 flex items-center justify-center rounded-lg px-3 top-4 left-4 bg-red-600 z-[100]">
-          18+
-        </span>
-        {/* } */}
+    <div className="space-y-3">
+      <div className="overflow-hidden rounded-xl w-full h-[50vh] relative transition-all hover:scale-[1.01] cursor-pointer">
+        {/* {movie.adult && ( */}
+          <span className="absolute h-8 flex items-center justify-center rounded-lg px-3 top-4 left-4 bg-red-600 z-[100]">
+            18+
+          </span>
+        {/* )} */}
         <Image
           alt=""
           className="object-cover w-full h-full"
@@ -65,4 +64,4 @@ const MovieCard = ({ movie }: Props) => {
   );
 };
 
-export default MovieCard;
+export default SliderMovieCard;
